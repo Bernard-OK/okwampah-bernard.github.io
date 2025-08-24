@@ -25,21 +25,17 @@
             background: linear-gradient(135deg, #2d3748 0%, #4a5568 50%, #2d3748 100%);
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
             position: relative;
-            padding: 4rem 2rem 2rem;
+            padding: 2rem;
         }
 
         .hero-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             max-width: 1000px;
-            margin: 0 auto;
+            margin-bottom: 4rem;
         }
 
         .hero h1 {
@@ -54,36 +50,18 @@
         .hero .subtitle {
             font-size: 1.1rem;
             line-height: 1.8;
-            margin-bottom: 3rem;
+            margin-bottom: 0;
             opacity: 0.9;
             font-weight: 300;
             animation: fadeInUp 1s ease 0.2s both;
         }
 
-        .scroll-indicator {
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease 0.4s both;
-        }
-
-        .scroll-arrow {
-            display: inline-flex;
+        .hero-bottom {
+            display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            border-radius: 50%;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .scroll-arrow:hover {
-            border-color: white;
-            color: white;
-            transform: translateY(-2px);
+            gap: 3rem;
+            animation: fadeInUp 1s ease 0.4s both;
         }
 
         .hero-nav {
@@ -92,7 +70,6 @@
             border-radius: 0;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            animation: fadeInUp 1s ease 0.6s both;
         }
 
         .hero-nav-link {
@@ -116,6 +93,33 @@
             color: #2563eb;
         }
 
+        .scroll-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .scroll-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.4rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .scroll-arrow:hover {
+            border-color: white;
+            color: white;
+            transform: translateY(-2px);
+        }
+
         .social-icons {
             position: absolute;
             right: 3rem;
@@ -123,7 +127,7 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            animation: fadeInUp 1s ease 0.8s both;
+            animation: fadeInUp 1s ease 0.6s both;
         }
 
         .social-icon {
@@ -403,6 +407,11 @@
                 padding: 0 1rem;
             }
 
+            .hero-bottom {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
             .hero-nav {
                 flex-direction: column;
                 width: 90%;
@@ -455,16 +464,18 @@
             <p class="subtitle">Venture-driven Technical CTO orchestrating the intersection of AI, cybersecurity, and Web3 to launch category-defining products. Strategic leadership in building scalable, secure, and intelligent systems. Experienced in architecting innovative platforms, engineering AI solutions, and developing production-ready applications across multiple technical domains.</p>
         </div>
 
-        <div class="scroll-indicator">
-            <a href="#skills" class="scroll-arrow">
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
+        <div class="hero-bottom">
+            <div class="hero-nav">
+                <a href="#projects" class="hero-nav-link">Projects</a>
+                <a href="#skills" class="hero-nav-link">Resume</a>
+                <a href="#contact" class="hero-nav-link">Get to Know Me</a>
+            </div>
 
-        <div class="hero-nav">
-            <a href="#projects" class="hero-nav-link">Projects</a>
-            <a href="#skills" class="hero-nav-link">Skills</a>
-            <a href="#contact" class="hero-nav-link">Contact</a>
+            <div class="scroll-indicator">
+                <a href="#skills" class="scroll-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
         </div>
 
         <div class="social-icons">
