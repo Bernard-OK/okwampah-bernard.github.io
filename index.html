@@ -22,61 +22,125 @@
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 50%, #2d3748 100%);
             display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
             text-align: center;
             color: white;
             position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.3);
+            padding: 4rem 2rem 2rem;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
             animation: fadeInUp 1s ease;
         }
 
         .hero .subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
             opacity: 0.9;
+            font-weight: 300;
             animation: fadeInUp 1s ease 0.2s both;
         }
 
-        .cta-button {
-            display: inline-block;
-            background: #f59e0b;
-            color: white;
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+        .scroll-indicator {
+            margin-bottom: 2rem;
             animation: fadeInUp 1s ease 0.4s both;
         }
 
-        .cta-button:hover {
-            background: #d97706;
+        .scroll-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .scroll-arrow:hover {
+            border-color: white;
+            color: white;
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+        }
+
+        .hero-nav {
+            display: flex;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .hero-nav-link {
+            padding: 1.2rem 2.5rem;
+            color: #2d3748;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .hero-nav-link:last-child {
+            border-right: none;
+        }
+
+        .hero-nav-link:hover {
+            background: #f7fafc;
+            color: #2563eb;
+        }
+
+        .social-icons {
+            position: absolute;
+            right: 3rem;
+            bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            animation: fadeInUp 1s ease 0.8s both;
+        }
+
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-icon:hover {
+            color: white;
+            transform: translateX(-3px);
         }
 
         /* About Section */
@@ -334,6 +398,33 @@
                 font-size: 2.5rem;
             }
 
+            .hero .subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+
+            .hero-nav {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .hero-nav-link {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 1rem 2rem;
+            }
+
+            .hero-nav-link:last-child {
+                border-bottom: none;
+            }
+
+            .social-icons {
+                position: static;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 2rem;
+            }
+
             .about-content {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -365,9 +456,29 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Data Analyst & Insights Specialist</h1>
-            <p class="subtitle">Transforming raw data into actionable business insights through advanced analytics and visualization</p>
-            <a href="#projects" class="cta-button">View My Work</a>
+            <h1>BERNARD'S PORTFOLIO</h1>
+            <p class="subtitle">Dynamic Data Analyst and Business Strategist adept in Python, SQL, Tableau, PowerBI and Excel. Proven ability to transform complex datasets into actionable insights for informed decision-making. Innovative and detail-oriented, with a passion for visualizing data to drive business and digital growth. Strong problem-solving, communication, and collaboration skills, enabling effective engagement with technical and non-technical stakeholders. Results-driven and committed to excellence, ready to contribute to organizational success through data-driven strategies.</p>
+        </div>
+
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+
+        <div class="hero-nav">
+            <a href="#projects" class="hero-nav-link">Projects</a>
+            <a href="#skills" class="hero-nav-link">Skills</a>
+            <a href="#about" class="hero-nav-link">Get to Know Me</a>
+        </div>
+
+        <div class="social-icons">
+            <a href="#" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
         </div>
     </section>
 
